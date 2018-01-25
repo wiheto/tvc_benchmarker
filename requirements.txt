@@ -1,0 +1,10 @@
+matplotlib>=1.5.3
+numpy>=1.14.0
+pandas>=0.22.0
+pymc3>=3.2
+requests>=2.14.2
+scipy>=0.18.1
+seaborn>=0.7.0
+setuptools>=35.0.2
+tabulate>=0.7.7
+Teneto>=0.2.1

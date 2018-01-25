@@ -1,0 +1,4 @@
+include tvc_benchmarker/data/data/*
+include tvc_benchmarker/data/hrf/*
+include tvc_benchmarker/data/dfc/*
+include tvc_benchmarker/data/routine_params/*
