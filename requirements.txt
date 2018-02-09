@@ -7,4 +7,4 @@ scipy>=0.18.1
 seaborn>=0.7.0
 setuptools>=35.0.2
 tabulate>=0.7.7
-Teneto>=0.2.1
+Teneto>=0.2.3
