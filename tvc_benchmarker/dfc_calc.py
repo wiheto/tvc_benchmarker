@@ -2,7 +2,7 @@ import teneto
 import tvc_benchmarker
 import numpy as np
 import pandas as pd
-def dfc_calc(data,methods=['SW','TSW','SD','JC','TD'],sw_window=63,taper_name='norm',taper_properties=[0,10],sd_distance='euclidean',td_window=7,mi='alpha',col_ind=[]):
+def dfc_calc(data,methods=['SW','TSW','SD','JC','TD'],sw_window=63,taper_name='norm',taper_properties=[0,10],sd_distance='euclidean',mtd_window=7,mi='alpha',colind=None):
     """
     Required parameters for the various differnet methods:
 
@@ -22,8 +22,8 @@ def dfc_calc(data,methods=['SW','TSW','SD','JC','TD'],sw_window=63,taper_name='n
             Distance funciton used to calculate the similarity between time-points. Can be any of the distances functions in scipy.spatial.distance.
     if method == 'JC'
         There are no parmaeters, have empty dictionary as parameter input.
-    if method == 'TD'
-        td_window= [Integer]
+    if method == 'MTD'
+        mtd_window= [Integer]
             Length of window
 
     # mi='alpha'
@@ -32,10 +32,12 @@ def dfc_calc(data,methods=['SW','TSW','SD','JC','TD'],sw_window=63,taper_name='n
     # If data is a string, load precalcuated data
     if isinstance(data, str):
 
-        if data == 'sim-1':
+        if data == 'sim-1' and not colind:
             colind = 1
-        elif data == 'sim-2' or data == 'sim-3' or data == 'sim-4':
+        elif (data == 'sim-2' or data == 'sim-3' or data == 'sim-4') and not colind:
             colind = 2
+        elif colind:
+            pass
         else:
             raise ValueError('unknown simulation. Input must be  "sim-1", "sim-2", "sim-3" or "sim-4"')
         df = pd.read_csv(tvc_benchmarker.__path__[0] + '/data/dfc/' + data + '_dfc.csv',index_col=np.arange(0,colind))
@@ -185,7 +187,7 @@ def dfc_calc(data,methods=['SW','TSW','SD','JC','TD'],sw_window=63,taper_name='n
             dfc_params['method'] = 'temporalderivative'
             dfc_params['dimord'] = 'node,time'
             dfc_params['postpro'] = 'no'
-            dfc_params['windowsize'] = td_window
+            dfc_params['windowsize'] = mtd_window
             dfc_params['report'] = 'no'
 
             if mi_parameters[0]:
@@ -194,13 +196,13 @@ def dfc_calc(data,methods=['SW','TSW','SD','JC','TD'],sw_window=63,taper_name='n
                     ts1 = data['timeseries_1'][mi_params]
                     ts2 = data['timeseries_2'][mi_params]
                     connectivity = teneto.derive.derive(np.array([ts1,ts2]),dfc_params)[0,1,:]
-                    dfc['TD'].append(np.lib.pad(np.hstack([np.nan,connectivity]),int((td_window-1)/2),mode='constant',constant_values=np.nan))
+                    dfc['TD'].append(np.lib.pad(np.hstack([np.nan,connectivity]),int((mtd_window-1)/2),mode='constant',constant_values=np.nan))
             # Otherwise do this
             else:
                 ts1 = data['timeseries_1']
                 ts2 = data['timeseries_2']
                 connectivity = teneto.derive.derive(np.array([ts1,ts2]),dfc_params)[0,1,:]
-                dfc['TD'].append(np.lib.pad(np.hstack([np.nan,connectivity]),int((td_window-1)/2),mode='constant',constant_values=np.nan))
+                dfc['TD'].append(np.lib.pad(np.hstack([np.nan,connectivity]),int((mtd_window-1)/2),mode='constant',constant_values=np.nan))
             # Line up all appened arrays
             dfc['TD'] = np.concatenate(dfc['TD'])
 

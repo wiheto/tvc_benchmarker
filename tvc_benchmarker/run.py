@@ -95,7 +95,7 @@ def run_simulations(routine_version=1.0,usesaved='yes',new_method=None,params_ne
         # Load saved data or calculate again
         if usesaved == 'yes':
             data = tvc_benchmarker.load_data(sim['name'],len(sim['multi_index'])+1)
-            dfc = tvc_benchmarker.dfc_calc(sim['name'],col_ind=len(sim['multi_index'])+1)
+            dfc = tvc_benchmarker.dfc_calc(sim['name'],colind=len(sim['multi_index'])+1)
         else:
             multi_index = list([sim['params'][n] for n in sim['multi_index']])
             multi_index_labels = list(sim['multi_index'])

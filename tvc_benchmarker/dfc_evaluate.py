@@ -30,6 +30,7 @@ def model_dfc(x,dfc,dat_dir,model_prefix,bayes_model='bayes_model',mi='alpha',mo
 
     for sim_it, mi_params in enumerate(mi_parameters):
         for method in dfc.columns:
+            plt.close('all')
             X=dfc[method][mi_params]
             Y=x['covariance_parameter'][mi_params][X.index]
             trace_and_model = tvc_benchmarker.bayes_model(X,Y,**model_params)
@@ -44,7 +45,7 @@ def model_dfc(x,dfc,dat_dir,model_prefix,bayes_model='bayes_model',mi='alpha',mo
 
 def trace_plot(dat_dir,file_name,trace):
 
-    fig,ax = plt.subplots(4,2)
+    fig,ax = plt.subplots(3,2)
     pm.traceplot(trace,ax=ax)
     fig.savefig(dat_dir + '/' +  file_name + '_traceplot.png',r=300)
 
