@@ -2,8 +2,6 @@
 
 Simulations for testing covariance tracking. Accompanies the article by Thompson et al (preprint) [A simulation and comparison of time-varying functional connectivity methods](https://www.biorxiv.org/content/early/2017/11/01/212241)
 
-_Note: V1 of the older named "dfcbenchmarker" does not equal V1 of tvc_benchmarker._   
-
 ## Contents
 
 - Install tvc_benchmarker
@@ -331,3 +329,5 @@ Should run both these simulations, perform the statistics and create plots for e
 ## Problems/comments/something unclear?
 
 Leave an issue here.
+
+_Note: V1 of the older named "dfcbenchmarker" does not equal V1 of tvc_benchmarker._   
