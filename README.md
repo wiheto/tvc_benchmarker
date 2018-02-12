@@ -28,8 +28,6 @@ pip install tvc_benchmarker
 
 It is tested only on Python 3 but, in principle, should work on Python 2.
 
-__(note this only applies once this README is complete (i.e. when the "*This is to be completed soon*" are filled in)). Until then, manual install. Download the repo (`git clone http://github.com/wiheto/tvc_benchmarker`) and type pip install /path/to/repo__
-
 ## What you can do with tvc_benchmarker
 
 - Rerun the entire code.
