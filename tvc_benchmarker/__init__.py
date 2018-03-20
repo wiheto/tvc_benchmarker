@@ -13,3 +13,4 @@ from tvc_benchmarker.plot import plot_betadfc_distribution, plot_fluctuating_cov
 from tvc_benchmarker.add_method import calc_new_method
 from tvc_benchmarker.run import run_simulations
 from tvc_benchmarker.send_method import send_method
+import __main__
