@@ -1,6 +1,17 @@
 from setuptools import setup,find_packages
 setup(name='tvc_benchmarker',
       version='1.0',
+      install_requires=[
+         'matplotlib>=1.5.3',
+         'numpy>=1.14.0',
+         'pandas>=0.22.0',
+         'pymc3>=3.2',
+         'requests>=2.14.2',
+         'scipy>=0.18.1',
+         'seaborn>=0.7.0',
+         'setuptools>=35.0.2',
+         'tabulate>=0.7.7',
+         'teneto>=0.2.3'],
       description='tvc_benchmarker is a package that compares different time-varying functoinal connectivity methods against eachother (neuroimaging/fmri).',
       packages = ['tvc_benchmarker'],
       package_data={'':['./tvc_benchmarker/data/']},
