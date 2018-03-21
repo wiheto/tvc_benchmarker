@@ -179,12 +179,12 @@ def dfc_calc(data,methods=['SW','TSW','SD','JC','TD'],sw_window=63,taper_name='n
 
 
         #Temporal derivative
-        if 'TD' in methods:
+        if 'MTD' in methods:
 
             dfc['TD'] = []
 
             dfc_params={}
-            dfc_params['method'] = 'temporalderivative'
+            dfc_params['method'] = 'mtd'
             dfc_params['dimord'] = 'node,time'
             dfc_params['postpro'] = 'no'
             dfc_params['windowsize'] = mtd_window
