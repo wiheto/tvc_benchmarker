@@ -25,7 +25,7 @@ And there you should be able to find something like the following output:
 
 |CONTAINER ID|IMAGE|COMMAND|CREATED|STATUS|PORTS|NAMES
 |---|---|---|---|---|---|---|
-|ea0cef5dff59|tvc_benchmarker|"python3 -m tvc_benc…"|22 hours ago|Exited (0) 13 hours ago|brave_bardeen
+|ea0cef5dff59|tvc_benchmarker|"python3 -m tvc_benc…"|22 hours ago|Exited (0) 13 hours ago||brave_bardeen
 
 You want to identify the NAMES (so here it would be brave_bardeen). 
 Then to copy from the docker container, type: 
