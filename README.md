@@ -20,17 +20,23 @@ Simulations for testing covariance tracking. Accompanies the article by Thompson
 
 ## Install
 
+tvc_benchmarker is written in Python 3. So a python version > 3.5 is needed.  
+
 You can install tvc_benchmarker through pip ([What is pip?](http://www.pythonforbeginners.com/basics/how-to-use-pip-and-pypi/)), simply type:
 
 ```bash
 pip install tvc_benchmarker
 ```
 
-It is tested only on Python 3 but, in principle, should work on Python 2.
+This should install all the requirements.
+
+It is however advised to install __pymc3__ and get it working with __thaeno__ prior to installing tvc_benchmarker as they can sometimes require you to install additional libraries or configurations that could be missing ([see pymc3 docs for more informations here](http://docs.pymc.io/)). 
+
+There is also a docker container that can be built in ./Dockerfile/ (see README there for more details). When running the docker image, it reruns the entire code within the docker image. (Flags for adding new methods within the Docker file are planned but not currently present).  
 
 ## What you can do with tvc_benchmarker
 
-- Rerun the entire code.
+- Rerun the entire code that is included in the paper.
 - Add new methods that get benchmarked in the same way as the other methods.
 - Send the new method within tvc_benchmarker so it gets added in future reports.
 - Change the parameters of different simulations. Multiple parameters can be specified for (nearly) all parameters.
@@ -55,6 +61,12 @@ If you want to calculate everything from the start.
 
 ```python
 tvc_benchmarker.run_simulations(usesaved=False)
+```
+
+Alternatively the above can be done from the commandline:
+
+```bash 
+python -m tvc_benchmarker 
 ```
 
 When there are additional routines (e.g. additional simulations) you can specify the version number to specify which version you want to run:
