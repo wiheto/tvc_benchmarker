@@ -22,7 +22,7 @@ Simulations for testing covariance tracking. Accompanies the article by Thompson
 
 tvc_benchmarker is written in Python 3. So a python version > 3.5 is needed.  
 
-You can install tvc_benchmarker through [pip](http://www.pythonforbeginners.com/basics/how-to-use-pip-and-pypi/)) and [conda](https://conda.io/docs/), simply type:
+You can install tvc_benchmarker through [pip](http://www.pythonforbeginners.com/basics/how-to-use-pip-and-pypi/) and [conda](https://conda.io/docs/), simply type:
 
 ```bash
 conda install theano pygpu
