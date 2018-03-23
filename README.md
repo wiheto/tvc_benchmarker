@@ -31,7 +31,7 @@ pip install tvc_benchmarker
 
 This should install all the requirements. If you do not want to use conda, see the Theano documentation below to install without conda. 
 
-It is however possible that some errors will occur due to theano failing to install. You can test if it has been successfully installed with the above by typing `nosetests thaeno` (this takes some time). Sometimes additional tweaks/settings may be required to successfully get thaeno running.([see Theano installation instructions](http://theano.readthedocs.io/en/latest/install.html) for more details. 
+It is however possible that some errors will occur due to theano failing to install. You can test if it has been successfully installed with the above by typing `nosetests thaeno` (this takes some time). Sometimes additional tweaks/settings may be required to successfully get thaeno running.([see Theano installation instructions](http://theano.readthedocs.io/en/latest/install.html) for more details). 
 
 If any warning are raised when importing tvc_benchmarker (e.g. futurewarnings or failed to import the duecredit module) and tvc_benchmarker still imports successfully, these warnings can be ignored. 
 
