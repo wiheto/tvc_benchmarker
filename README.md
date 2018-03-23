@@ -22,15 +22,18 @@ Simulations for testing covariance tracking. Accompanies the article by Thompson
 
 tvc_benchmarker is written in Python 3. So a python version > 3.5 is needed.  
 
-You can install tvc_benchmarker through pip ([What is pip?](http://www.pythonforbeginners.com/basics/how-to-use-pip-and-pypi/)), simply type:
+You can install tvc_benchmarker through [pip](http://www.pythonforbeginners.com/basics/how-to-use-pip-and-pypi/)) and [conda](https://conda.io/docs/), simply type:
 
 ```bash
+conda install theano pygpu
 pip install tvc_benchmarker
 ```
 
-This should install all the requirements.
+This should install all the requirements. If you do not want to use conda, see the Theano documentation below to install without conda. 
 
-It is however advised to install __pymc3__ and get it working with __thaeno__ prior to installing tvc_benchmarker as they can sometimes require you to install additional libraries or configurations that could be missing ([see pymc3 docs for more informations here](http://docs.pymc.io/)). 
+It is however possible that some errors will occur due to theano failing to install. You can test if it has been successfully installed with the above by typing `nosetests thaeno` (this takes some time). Sometimes additional tweaks/settings may be required to successfully get thaeno running.([see Theeno installation instructions](http://theano.readthedocs.io/en/latest/install.html) for more details. 
+
+If any warning are raised when importing tvc_benchmarker (e.g. futurewarnings or failed to import the duecredit module) and tvc_benchmarker still imports successfully, these warnings can be ignored. 
 
 There is also a docker container that can be built in ./Dockerfile/ (see README there for more details). When running the docker image, it reruns the entire code within the docker image. (Flags for adding new methods within the Docker file are planned but not currently present).  
 
