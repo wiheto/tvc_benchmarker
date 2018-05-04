@@ -147,6 +147,9 @@ def gen_data_sim2(params,mi='alpha'):
     #x=np.reshape(x,[x.shape[0],np.prod(x.shape[1:])],order='F')
     #fluct_cv=np.reshape(fluct_cv,[np.prod(fluct_cv.shape)],order='F')
 
+    if any(np.abs(fluct_cv)>1): 
+        print('TVC BENCHMARKER WARNING: some value(s) of r_t>1 or r_t<-1. Consider changing parameters.')
+
     multi_ind = pd.MultiIndex.from_product((mi_param_list) + [np.arange(0,d['n_samples'])], names=mi + ['time'])
     df = pd.DataFrame(data={'timeseries_1': x[0,:],'timeseries_2':x[1,:],'covariance_parameter':fluct_cv}, index=multi_ind)
     return df
