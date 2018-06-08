@@ -1,6 +1,6 @@
 from setuptools import setup,find_packages
 setup(name='tvc_benchmarker',
-      version='1.0',
+      version='1.0.1',
       install_requires=[
          'matplotlib>=1.5.3',
          'numpy>=1.14.0',
