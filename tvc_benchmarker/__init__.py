@@ -3,7 +3,7 @@
 """tvc_benchmarker is a package that compares different dynamic functoinal connectivity methods against eachother."""
 #
 __author__ = "William Hedley Thompson (wiheto)"
-__version__ = "0.1" #Peer reviewed version becomes version 1.0
+__version__ = "1.0.2" #Peer reviewed version is 1.0
 #
 from tvc_benchmarker.get_data import gen_data_sim1,gen_data_sim2,gen_data_sim3,gen_data_sim4, load_data, gen_data
 from tvc_benchmarker.dfc_calc import dfc_calc

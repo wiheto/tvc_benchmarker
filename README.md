@@ -343,4 +343,10 @@ Should run both these simulations, perform the statistics and create plots for e
 
 Leave an issue here.
 
-_Note: V1 of the older named "dfcbenchmarker" does not equal V1 of tvc_benchmarker._   
+_Note: V1 of the older named "dfcbenchmarker" does not equal V1 of tvc_benchmarker.
+
+
+## Changes since article release
+
+- Updated requirements to pymc3 3.4.1.
+- Fixed a bug when loading stats results from pymc 3.4.1 and onward. Removes burn from calc_waic.   

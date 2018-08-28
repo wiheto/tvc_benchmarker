@@ -1,11 +1,11 @@
 from setuptools import setup,find_packages
 setup(name='tvc_benchmarker',
-      version='1.0.1',
+      version='1.0.2',
       install_requires=[
          'matplotlib>=1.5.3',
          'numpy>=1.14.0',
          'pandas>=0.22.0',
-         'pymc3>=3.2',
+         'pymc3>=3.4.1',
          'requests>=2.14.2',
          'scipy>=0.18.1',
          'seaborn>=0.7.0',
