@@ -1,6 +1,8 @@
 # tvc_benchmarker
 
-Simulations for testing covariance tracking. Accompanies the article by Thompson et al (preprint) [A simulation and comparison of time-varying functional connectivity methods](https://www.biorxiv.org/content/early/2017/11/01/212241)
+Simulations for testing covariance tracking. Accompanies the article by Thompson et al (2018) [A simulation and comparison of time-varying functional connectivity methods](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006196)
+
+Have any ideas for improvements to the next version of tvc_benchmarker? [Please leave a commen here](https://github.com/wiheto/tvc_benchmarker/issues/1)
 
 ## Contents
 
